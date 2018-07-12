@@ -3,7 +3,8 @@ def main():
     get_first_model_each_manufacturer()
     get_all_matching_models()
     sort_car_models()
-    
+
+
 cars = {
     'Ford': ['Falcon', 'Focus', 'Festiva', 'Fairlane'],
     'Holden': ['Commodore', 'Captiva', 'Barina', 'Trailblazer'],
@@ -21,6 +22,7 @@ def get_all_jeeps():
     jeep = cars.get('Jeep', None)
     print(jeep)
 
+
 def get_first_model_each_manufacturer():
     """return a list of matching models (original ordering)"""
     print("----")
@@ -28,6 +30,7 @@ def get_first_model_each_manufacturer():
     print("----")
     for values in cars.values():
         print(values[0])
+
 
 def get_all_matching_models(grep='trail'):
     """return a list of all models containing the case insensitive
@@ -43,9 +46,9 @@ def sort_car_models():
     print("----")
     print("Sorted car models")
     print("----")
-    sorted_cars = [(k,v) for k,v in cars.items()]
+    sorted_cars = [(k, v) for k, v in cars.items()]
     print(sorted_cars)
 
-    
+
 if __name__ == '__main__':
-	main()
+    main()
