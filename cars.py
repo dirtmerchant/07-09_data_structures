@@ -1,8 +1,8 @@
 def main():
-    get_all_jeeps()
-    get_first_model_each_manufacturer()
-    get_all_matching_models()
-    sort_car_models()
+    # get_all_jeeps()
+    # get_first_model_each_manufacturer()
+    # get_all_matching_models()
+     sort_car_models()
 
 
 cars = {
@@ -39,6 +39,11 @@ def get_all_matching_models(grep='trail'):
     print("----")
     print("All models containing 'trail'")
     print("----")
+    grep = grep.lower()
+    models = sum(cars.values(), [])  # flatten list of lists
+    matching_models = [model for model in models
+                       if grep in model.lower()]
+    print sorted(matching_models)
 
 
 def sort_car_models():
@@ -46,9 +51,7 @@ def sort_car_models():
     print("----")
     print("Sorted car models")
     print("----")
-    sorted_cars = [(k, v) for k, v in cars.items()]
-    print(sorted_cars)
-
+    
 
 if __name__ == '__main__':
     main()
