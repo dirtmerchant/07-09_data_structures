@@ -1,8 +1,8 @@
 def main():
-    # get_all_jeeps()
-    # get_first_model_each_manufacturer()
-    # get_all_matching_models()
-     sort_car_models()
+    get_all_jeeps()
+    get_first_model_each_manufacturer()
+    get_all_matching_models()
+    sort_car_models()
 
 
 cars = {
@@ -49,9 +49,12 @@ def get_all_matching_models(grep='trail'):
 def sort_car_models():
     """sort the car models (values) and return the resulting cars dict"""
     print("----")
-    print("Sorted car models")
+    print("Car models sorted by model")
     print("----")
-    
+
+    print {manufacturer: sorted(models) for
+           manufacturer, models in cars.items()}
+
 
 if __name__ == '__main__':
     main()
